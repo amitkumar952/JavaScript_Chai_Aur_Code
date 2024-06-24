@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Project Working</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+</body>
+<script>
+    const sayDate = function(){
+        console.log("Amit", Date.now());
+    }
+    // const intervalId = setInterval(sayDate, 1000)
+
+    // clearInterval(intervalId) // clearInerval ke through humne sub kuch clear ker diya ab kuch bhi print nhi hoga
+
+    document.querySelector('#start').addEventListener('click', function(){
+        console.log("Start", Date.now());
+    })
+    const intervalId = setInterval(sayDate, 1000)
+
+    clearInterval(intervalId) // clearInerval ke through humne sub kuch clear ker diya ab kuch bhi print nhi hoga
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        console.log("Stop")
+        clearInterval()
+    })
+   
+</script>
+</html>
